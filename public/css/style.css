@@ -1,0 +1,289 @@
+@font-face{
+    font-family: 'SubwayTicker';
+    src: url('../fonts/SUBWT___.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*** Reset ***/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*** * ***/
+
+/*** Essential ***/
+html,
+body {
+    height: 100%;
+    background-color: #505050;
+    font-family: "Courier New";
+}
+
+body {
+
+}
+
+body>a {
+    display: none; !important;
+}
+
+/*** * ***/
+
+.hide {
+    display: none;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 720px;
+    min-width: 480px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    width: 100%;
+    line-height: 100px;
+    border: 8px ridge #505050 ;
+    background-color: coral;
+}
+
+.header > span {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'SubwayTicker';
+    font-size: 80px;
+    color: #272727;
+}
+
+.content {
+    width: 100%;
+    height: auto;
+    border: 8px ridge #505050 ;
+    background-color: thistle;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.fighter {
+    width: 33%;
+    overflow: hidden;
+}
+.fighter.left {
+    float: left;
+}
+.fighter.right {
+    float: right;
+}
+
+.hp {
+    position: relative;
+    margin: 0 auto;
+    width: 147px;
+    height: 30px;
+    background-color: #000000;
+    border: 3px solid #000000;
+}
+.hp > .ind {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #e70707;
+    transition: width 500ms ease;
+}
+.hp > .text {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 24px;
+    color: #ffffff;
+}
+.avatar {
+    margin: 0 auto;
+    width: 147px;
+    height: 147px;
+}
+.avatar > div {
+    width: 100%;
+    height: 100%;
+    background: url(../img/avatars.jpg) no-repeat;
+}
+.avatar > .x1 {
+    background-position-x: 0;
+}
+.avatar > .x2 {
+    background-position-x: -144px;
+}
+.avatar > .x3 {
+    background-position-x: -288px;
+}
+.avatar > .x4 {
+    background-position-x: -433px;
+}
+.avatar > .y1 {
+    background-position-y: 0;
+}
+.avatar > .y2 {
+    background-position-y: -145px;
+}
+.avatar > .y3 {
+    background-position-y: -290px;
+}
+.stats {
+    position: relative;
+    margin: 0 auto;
+    width: 147px;
+    background-color: #272727;
+    border: 3px solid #000000;
+    line-height: 24px;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.stage {
+    width: 34%;
+    margin: 0 auto;
+}
+.fight_btn, .endgame {
+    width: 150px;
+    height: 60px;
+    margin: 0 auto;
+    line-height: 50px;
+    border: 5px solid #aaaaaa;
+    background-color: #990033;
+    color: #ffffff;
+    font-size: 36px;
+    text-align: center;
+    cursor: pointer;
+}
+.stage .round {
+    width: 150px;
+    height: 60px;
+    margin: 0 auto;
+    color: #990033;
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+}
+.attack {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 5px 0;
+}
+.attack > .bullet {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #e70707;
+    color: #ffff00;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    transition: left 1s ease, top 2s ease;
+}
+.attack.f1 > .bullet {
+    left: -30px;
+}
+.attack.f2 > .bullet {
+    left: 100%;
+}
+.attack.f1 > .bullet.fire {
+    left: 100%;
+}
+.attack.f2 > .bullet.fire {
+    left: -30px;
+}
+.attack > .bullet.damage {
+    top: -70px;
+    background-color: transparent;
+    color: #e70707;
+}
+.attack > .bullet.hide {
+    display: none;
+}
+
+.footer {
+    width: 100%;
+    height: 200px;
+    padding: 10px 20px;
+    overflow-y: scroll;
+    border: 8px ridge #505050 ;
+    background-color: #272727;
+    color: #00ff00;
+    font-size: 14px;
+}
+.footer > .title,
+.footer > .break,
+.footer > .startline,
+.footer > .endline {
+    font-size: 18px;
+    font-weight: bold;
+    /*text-align: center;*/
+}
+.footer > .break:after,
+.footer > .endline:after {
+    content: "---------------------------------";
+}
+.footer > .startline {
+    margin-top: 20px;
+}
+.footer > .endline {
+    margin-bottom: 20px;
+}
+.footer > .round {
+
+}
